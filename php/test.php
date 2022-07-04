@@ -34,11 +34,13 @@ $type7 = new Exception('Mon erreur');
 
 //-- Les comparaisons de valeur ---------------------------
 // TODO Note en commentaire le résultat affiché par le var_dump (true ou false ?)
+
 //Le var dump affiche le type et les infos compris dans la variable
+// '==' compare values
+// '===' compare values and values must be strictly equal in type
+    var_dump($type1 == $type2); //false
 
-    var_dump($type1 == $type2); // '==' compare values //false
-
-    var_dump($type1 === $type2); // '===' compare values and values must be strictly equal in type //true
+    var_dump($type1 === $type2); //true
     
     var_dump($type1 == $type3); //true
     
@@ -53,12 +55,11 @@ $type7 = new Exception('Mon erreur');
 //-- Valeurs des variables --------------------------------
 // TODO Quel sera le nombre affiché par l'instruction echo ?
 
-    //addition 
-    //add +1
-    //$a =$a +$b 
-    //le resulat sera 16
     //+= est un operateur numérique qui fait une addition
-
+    //add +1
+    //$a =$a + $b 
+    //resulat is : 16
+   
 $nombre = 10;
 $unAutreNombre = 5;
 
@@ -72,8 +73,8 @@ echo $nombre;
 //-- Retour de fonction  ---------------------------------
 // TODO Quel sera la phrase affichée par l'instruction echo ?
 
-    //echo affichera :  Premier return et Deuxieme return
-    //car le if execute le code tant que la condition est true (et 5 est bien inf. à 10)
+    // echo affichera :  'Premier return'
+    // la 1ere condition est true (et 5 est bien inf. à 10) et apres le return on s'arrete.
 
 function maFonction (int $nombre) {
     if ($nombre < 10) {
@@ -93,10 +94,7 @@ echo $test;
 //@@@@@ Niveau 2 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 //-- Portée des variables ---------------------------------
-// TODO Quel sera la phrase affichée par l'instruction echo ?
-
-    //REPONSE : Salut, ca va ? 
-    // Car l'echo est en dehors de la premiere fonction
+// TODO Quelle sera la phrase affichée par l'instruction echo ?
 
     $unTexte = "Salut, ";
 
@@ -107,10 +105,9 @@ echo $test;
     
     $unTexte = $unTexte . "ça va ?";
     echo $unTexte;
-    // result is : Salut, ça va ?
+    //result is : Salut, ca va ? 
+    // Car l'echo est en dehors de la fonction 'uneAutreFonction'
     
-
-
 
 
     // function uneAutreFonction () {
@@ -126,7 +123,6 @@ echo $test;
 
 
 //#########################################################
-
 //-- Strucure de controle conditionnelle (IF ELSE) --------
 // TODO Quel sera la phrase affichée par l'instruction echo ?
 
@@ -144,27 +140,20 @@ echo $texteAAfficher;
 //REPONSE : Condition 1 
 //Car elseif sera exécuté si le if précédent est false, la condition actuelle (elseif) sera donc true.
 //Elseif permet d'exécuter du code pour plusieurs conditions
+
+
+
+
 //#########################################################
-
-
-
-
-
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 //@@@@@ Niveau 3 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
-
-
-
-
-
 //#########################################################
 
 //-- Variables objets ou "références" ---------------------
 // TODO Quels seront les nombres affichés par les instructions echo ?
 
-    //REPONSE : echo va afficher "coucou" et "coucou"
+    //result is : echo va afficher "coucou" et "coucou"
     //on assigne la meme valeur 'coucou' à l'attribut de la variable 'object1' et 'object2'
 
 $object1 = new myClass();
